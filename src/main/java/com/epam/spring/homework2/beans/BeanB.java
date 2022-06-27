@@ -5,6 +5,7 @@ public class BeanB {
     private int value;
 
     public BeanB(String name, int value) {
+        System.out.println("created BeanB");
         this.name = name;
         this.value = value;
     }
@@ -28,5 +29,13 @@ public class BeanB {
     @Override
     public String toString() {
         return "BeanB{" + "name='" + name + '\'' + ", value='" + value + '\'' + '}';
+    }
+
+    public void customInitMethodBeanB() {
+        System.out.println("customInitMethodBeanB");
+    }
+
+    public void customDestroyMethodBeanB() {
+        System.out.println("customDestroyMethodBeanB");
     }
 }

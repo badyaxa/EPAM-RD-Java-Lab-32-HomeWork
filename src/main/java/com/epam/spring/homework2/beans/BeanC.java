@@ -6,6 +6,7 @@ public class BeanC {
     private int value;
 
     public BeanC(String name, int value) {
+        System.out.println("created BeanC");
         this.name = name;
         this.value = value;
     }
@@ -32,5 +33,13 @@ public class BeanC {
                 "name='" + name + '\'' +
                 ", value='" + value + '\'' +
                 '}';
+    }
+
+    public void customInitMethodBeanC() {
+        System.out.println("customInitMethodBeanC");
+    }
+
+    public void customDestroyMethodBeanC() {
+        System.out.println("customDestroyMethodBeanC");
     }
 }

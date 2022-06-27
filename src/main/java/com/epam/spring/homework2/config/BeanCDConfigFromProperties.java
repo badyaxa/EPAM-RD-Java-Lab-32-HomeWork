@@ -22,16 +22,14 @@ public class BeanCDConfigFromProperties {
     @Value("${beanD.value}")
     private int valueD;
 
-    @Bean("beanC")
+    @Bean(name = "beanC", initMethod = "customInitMethodBeanC", destroyMethod = "customDestroyMethodBeanC")
     @DependsOn("beanB")
     public BeanC getBeanC() {
-        System.out.println("created BeanC");
         return new BeanC(nameC, valueC);
     }
 
-    @Bean("beanD")
+    @Bean(name = "beanD", initMethod = "customInitMethodBeanD", destroyMethod = "customDestroyMethodBeanD")
     public BeanD getBeanD() {
-        System.out.println("created BeanD");
         return new BeanD(nameD, valueD);
     }
 

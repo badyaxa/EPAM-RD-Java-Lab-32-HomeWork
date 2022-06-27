@@ -16,10 +16,9 @@ public class BeanBConfigFromProperties {
     @Value("${beanB.value}")
     private int value;
 
-    @Bean("beanB")
+    @Bean(name = "beanB", initMethod = "customInitMethodBeanB", destroyMethod = "customDestroyMethodBeanB")
     @DependsOn("beanD")
     public BeanB getBeanB() {
-        System.out.println("created BeanB");
         return new BeanB(name, value);
     }
 }
