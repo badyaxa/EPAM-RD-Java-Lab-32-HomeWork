@@ -4,13 +4,12 @@ import com.epam.spring.homework2.beans.BeanB;
 import com.epam.spring.homework2.beans.BeanC;
 import com.epam.spring.homework2.beans.BeanD;
 import com.epam.spring.homework2.beans.BeanF;
-import com.epam.spring.homework2.config.BeanBConfigFromProperties;
-import org.springframework.context.ApplicationContext;
+import com.epam.spring.homework2.config.BeanConfigFromProperties;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class AplicationHW_2 {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanBConfigFromProperties.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfigFromProperties.class);
 
         System.out.println("===============Вивести перелік усіх бінів==================================");
 

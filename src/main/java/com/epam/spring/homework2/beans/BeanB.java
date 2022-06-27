@@ -1,34 +1,9 @@
 package com.epam.spring.homework2.beans;
 
-public class BeanB {
-    private String name;
-    private int value;
+public class BeanB extends BeanFather{
 
     public BeanB(String name, int value) {
-        System.out.println("BeanB created");
-        this.name = name;
-        this.value = value;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    @Override
-    public String toString() {
-        return "BeanB{" + "name='" + name + '\'' + ", value='" + value + '\'' + '}';
+        super(name, value);
     }
 
     public void customInitMethodBeanB() {

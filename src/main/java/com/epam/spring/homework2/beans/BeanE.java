@@ -3,39 +3,10 @@ package com.epam.spring.homework2.beans;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class BeanE {
-
-    private String name;
-    private int value;
+public class BeanE extends BeanFather{
 
     public BeanE(String name, int value) {
-        System.out.println("BeanE created");
-        this.name = name;
-        this.value = value;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    @Override
-    public String toString() {
-        return "BeanE{" +
-                "name='" + name + '\'' +
-                ", value='" + value + '\'' +
-                '}';
+        super(name, value);
     }
 
     @PostConstruct // was deprecated in Java 9, and removed in Java 11,
