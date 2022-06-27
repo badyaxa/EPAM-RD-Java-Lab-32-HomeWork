@@ -1,9 +1,6 @@
 package com.epam.spring.homework2.config;
 
-import com.epam.spring.homework2.beans.BeanB;
-import com.epam.spring.homework2.beans.BeanC;
-import com.epam.spring.homework2.beans.BeanD;
-import com.epam.spring.homework2.beans.BeanF;
+import com.epam.spring.homework2.beans.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 
@@ -37,5 +34,10 @@ public class BeanCDConfigFromProperties {
     @Lazy
     public BeanF getBeanF(){
         return new BeanF("NameBeanF", 6);
+    }
+
+    @Bean("beanA")
+    public BeanA getBeanA(){
+        return new BeanA("NameBeanA", 1);
     }
 }

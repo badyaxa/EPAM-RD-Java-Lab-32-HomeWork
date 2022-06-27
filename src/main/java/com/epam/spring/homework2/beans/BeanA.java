@@ -1,6 +1,9 @@
 package com.epam.spring.homework2.beans;
 
-public class BeanA {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class BeanA implements InitializingBean, DisposableBean {
 
     private String name;
     private int value;
@@ -33,5 +36,15 @@ public class BeanA {
                 "name='" + name + '\'' +
                 ", value='" + value + '\'' +
                 '}';
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("BeanA DisposableBean.destroy()");
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("BeanA InitializingBean.afterPropertiesSet()");
     }
 }
