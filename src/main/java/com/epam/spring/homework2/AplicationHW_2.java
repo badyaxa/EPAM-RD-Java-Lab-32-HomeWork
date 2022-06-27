@@ -9,7 +9,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class AplicationHW_2 {
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(BeanBConfigFromProperties.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanBConfigFromProperties.class);
+
+        System.out.println("=================================================");
 
         String[] beanDefinitionNames = context.getBeanDefinitionNames();
         for (String name : beanDefinitionNames) {
@@ -24,5 +26,8 @@ public class AplicationHW_2 {
         System.out.println("beanB = " + beanB);
         System.out.println("beanC = " + beanC);
         System.out.println("beanD = " + beanD);
+
+        System.out.println("=================================================");
+        context.close();
     }
 }
