@@ -9,7 +9,7 @@ public class BeanA implements InitializingBean, DisposableBean {
     private int value;
 
     public BeanA(String name, int value) {
-        System.out.println("created BeanA");
+        System.out.println("BeanA created");
         this.name = name;
         this.value = value;
     }

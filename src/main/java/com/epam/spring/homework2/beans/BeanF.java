@@ -7,7 +7,7 @@ public class BeanF {
     private int value;
 
     public BeanF(String name, int value) {
-        System.out.println("created BeanF");
+        System.out.println("BeanF created");
         this.name = name;
         this.value = value;
     }

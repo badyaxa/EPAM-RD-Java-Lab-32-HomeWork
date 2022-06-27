@@ -9,7 +9,7 @@ public class BeanE {
     private int value;
 
     public BeanE(String name, int value) {
-        System.out.println("created BeanE");
+        System.out.println("BeanE created");
         this.name = name;
         this.value = value;
     }

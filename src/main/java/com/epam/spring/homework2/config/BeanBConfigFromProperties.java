@@ -7,7 +7,7 @@ import org.springframework.context.annotation.*;
 
 @Configuration
 @PropertySource("beanb.properties")
-@Import(BeanCDConfigFromProperties.class)
+@Import(BeansConfigManual.class)
 public class BeanBConfigFromProperties {
 
     @Value("${beanB.name}")

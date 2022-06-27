@@ -12,14 +12,14 @@ public class AplicationHW_2 {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanBConfigFromProperties.class);
 
-        System.out.println("=================================================");
+        System.out.println("===============Вивести перелік усіх бінів==================================");
 
         String[] beanDefinitionNames = context.getBeanDefinitionNames();
         for (String name : beanDefinitionNames) {
             System.out.println(name);
         }
 
-        System.out.println("=================================================");
+        System.out.println("===============Вивести перелік усіх бінів==================================");
 
         BeanB beanB = context.getBean(BeanB.class);
         BeanC beanC = context.getBean(BeanC.class);
