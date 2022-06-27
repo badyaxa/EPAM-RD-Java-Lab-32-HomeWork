@@ -3,6 +3,7 @@ package com.epam.spring.homework2;
 import com.epam.spring.homework2.beans.BeanB;
 import com.epam.spring.homework2.beans.BeanC;
 import com.epam.spring.homework2.beans.BeanD;
+import com.epam.spring.homework2.beans.BeanF;
 import com.epam.spring.homework2.config.BeanBConfigFromProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -26,6 +27,11 @@ public class AplicationHW_2 {
         System.out.println("beanB = " + beanB);
         System.out.println("beanC = " + beanC);
         System.out.println("beanD = " + beanD);
+
+
+        System.out.println("=================================================");
+        BeanF beanF = context.getBean(BeanF.class);
+        System.out.println("beanF = " + beanF);
 
         System.out.println("=================================================");
         context.close();
