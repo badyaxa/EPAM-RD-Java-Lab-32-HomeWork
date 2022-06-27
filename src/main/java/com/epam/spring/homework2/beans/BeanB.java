@@ -5,7 +5,7 @@ public class BeanB {
     private int value;
 
     public BeanB(String name, int value) {
-        System.out.println("created BeanB");
+        System.out.println("BeanB created");
         this.name = name;
         this.value = value;
     }
@@ -32,10 +32,14 @@ public class BeanB {
     }
 
     public void customInitMethodBeanB() {
-        System.out.println("customInitMethodBeanB");
+        System.out.println("BeanB customInitMethod()");
     }
 
     public void customDestroyMethodBeanB() {
-        System.out.println("customDestroyMethodBeanB");
+        System.out.println("BeanB customDestroyMethod()");
+    }
+
+    public void secondCustomInitMethodBeanB() {
+        System.out.println("BeanB secondCustomInitMethodBeanB()");
     }
 }

@@ -6,7 +6,7 @@ import org.springframework.context.annotation.*;
 
 @Configuration
 @PropertySource("application.properties")
-public class BeanCDConfigFromProperties {
+public class BeansConfigManual {
 
     @Value("${beanC.name}")
     private String nameC;
@@ -44,5 +44,12 @@ public class BeanCDConfigFromProperties {
     @Bean("beanE")
     public BeanE getBeanE(){
         return new BeanE("NameBeanE", 5);
+    }
+
+
+    @Bean("customBeanFactoryPostProcessor")
+    public CustomBeanFactoryPostProcessor getCustomBeanFactoryPostProcessor() {
+        System.out.println("CustomBeanFactoryPostProcessor created");
+        return new CustomBeanFactoryPostProcessor();
     }
 }
