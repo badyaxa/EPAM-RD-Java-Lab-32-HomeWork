@@ -40,4 +40,9 @@ public class BeanCDConfigFromProperties {
     public BeanA getBeanA(){
         return new BeanA("NameBeanA", 1);
     }
+
+    @Bean("beanE")
+    public BeanE getBeanE(){
+        return new BeanE("NameBeanE", 5);
+    }
 }
