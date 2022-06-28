@@ -10,7 +10,7 @@ public class CustomBeanPostProcessor implements BeanPostProcessor {
         if (bean instanceof BeanFather) {
             if (((BeanFather) bean).getName() == null) {
                 System.out.println("CustomBeanPostProcessor " + beanName + " name is null");
-                System.out.println("CustomBeanPostProcessor Set new name = newName" + beanName);
+                System.out.println("CustomBeanPostProcessor Set new name = " + beanName + "NewName");
                 ((BeanFather) bean).setName(beanName + "NewName");
             }
 

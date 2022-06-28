@@ -32,7 +32,7 @@ public class BeanFather  {
 
     @Override
     public String toString() {
-        return "Bean{" +
+        return this.getClass().getSimpleName() + "{" +
                 "name='" + name + '\'' +
                 ", value='" + value + '\'' +
                 '}';
