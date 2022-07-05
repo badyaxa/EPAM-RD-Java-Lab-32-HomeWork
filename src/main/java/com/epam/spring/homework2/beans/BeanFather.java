@@ -1,8 +1,5 @@
 package com.epam.spring.homework2.beans;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-
 public class BeanFather  {
 
     private String name;

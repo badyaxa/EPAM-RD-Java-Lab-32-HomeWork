@@ -1,7 +1,6 @@
 package com.epam.spring.homework2.config;
 
 import com.epam.spring.homework2.beans.*;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 
 @Configuration
