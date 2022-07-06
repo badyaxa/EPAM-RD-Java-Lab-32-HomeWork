@@ -18,14 +18,11 @@ public class HomePageController {
     public String getMainPage() {
         log.info("-------------HomePageController.home()>>>");
         return "Local Time Is  <b>" + LocalTime.now(ZoneId.of("UTC+3")) + " (UTC+3)</b>"
-                + "<br>"
-                + "<br>"
-                + "<a href=\"/h2-console\" target=\"_blank\">/h2-console</a>"
-                + "<br>"
-                + "<br>"
-                + "<a href=\"/actuator/health\" target=\"_blank\">/actuator/health</a>"
-                + "<br>"
-                + "<br>"
-                + "<a href=\"/swagger-ui.html\" target=\"_blank\">/swagger-ui</a>";
+                + "<br><br>"
+                + "<a href=\"/h2-console\" target=\"_blank\"><b>/h2-console</b></a>"
+                + "<br><br>"
+                + "<a href=\"/actuator/health\" target=\"_blank\"><b>/actuator/health</b></a>"
+                + "<br><br>"
+                + "<a href=\"/swagger-ui.html\" target=\"_blank\"><b>/swagger-ui</b></a>";
     }
 }
