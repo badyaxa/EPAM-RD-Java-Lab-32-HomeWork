@@ -1,0 +1,19 @@
+package com.epam.spring.homework3.service.model.enums;
+
+public enum DoctorSpecialization {
+    ALLERGY_AND_IMMUNOLOGY,
+    ANESTHESIOLOGY,
+    CARDIOLOGY,
+    DERMATOLOGY,
+    DIAGNOSTIC_RADIOLOGY,
+    EMERGENCY_MEDICINE,
+    FAMILY_MEDICINE,
+    NEUROLOGY,
+    OBSTETRICS_AND_GYNECOLOGY,
+    OPHTHALMOLOGY,
+    OTOLARYNGOLOGIST,
+    PATHOLOGY,
+    PEDIATRICS,
+    PSYCHIATRY,
+    UROLOGY
+}
