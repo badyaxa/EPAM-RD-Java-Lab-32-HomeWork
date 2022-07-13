@@ -1,19 +1,18 @@
 package com.epam.spring.homework3.service.model;
 
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.time.Instant;
 
 @MappedSuperclass
-@Data
 @SuperBuilder
 @NoArgsConstructor
+@Getter
+@Setter
 public class Person {
 
     @Id
@@ -22,7 +21,10 @@ public class Person {
 
     private String firstName;
     private String lastName;
+
+    @Column(unique = true)
     private String phone;
-    private Instant createdOn = Instant.now();
+
+    private Instant created = Instant.now();
     private Instant lastChanged;
 }
