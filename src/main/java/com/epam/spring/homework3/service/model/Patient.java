@@ -8,6 +8,7 @@ import lombok.experimental.SuperBuilder;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Set;
 
@@ -21,7 +22,7 @@ public class Patient extends Person {
 
     private String medicalDiagnosis;
     private String bloodType;
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
 
     @OneToMany(mappedBy = "patient")
     private Set<MedicalAppointment> hospitalCard;
