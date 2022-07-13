@@ -33,7 +33,7 @@ public class AplicationHW_2 {
 
         System.out.println("\n===============Вивести конфігурацію усіх бінів на екран==================================");
         for (String name : beanDefinitionNames) {
-            System.out.println(name + " " + context.getBean(name));
+            System.out.println(context.getBeanDefinition(name));
         }
         System.out.println("===============Вивести конфігурацію усіх бінів на екран==================================\n");
 
