@@ -1,6 +1,6 @@
 package com.epam.spring.homework2.beans;
 
-public class BeanFather  {
+public class BeanFather {
 
     private String name;
     private int value;
@@ -29,9 +29,9 @@ public class BeanFather  {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName() + "{" +
-                "name='" + name + '\'' +
-                ", value='" + value + '\'' +
-                '}';
+        return this.getClass().getSimpleName() + "{"
+                + "name='" + name + '\''
+                + ", value='" + value + '\''
+                + '}';
     }
 }

@@ -1,6 +1,6 @@
 package com.epam.spring.homework2.beans;
 
-public class BeanC extends BeanFather{
+public class BeanC extends BeanFather {
 
     public BeanC(String name, int value) {
         super(name, value);

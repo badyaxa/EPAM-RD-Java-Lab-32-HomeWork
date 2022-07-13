@@ -15,7 +15,7 @@ public class CustomBeanFactoryPostProcessor implements BeanFactoryPostProcessor 
         configurableListableBeanFactory.getBeanDefinition("beanB").setInitMethodName("secondCustomInitMethodBeanB");
 
         System.out.println("getInitMethodName() = " + configurableListableBeanFactory.getBeanDefinition("beanB").getInitMethodName());
-        
+
         System.out.println("============CustomBeanFactoryPostProcessor postProcessBeanFactory()============");
     }
 }

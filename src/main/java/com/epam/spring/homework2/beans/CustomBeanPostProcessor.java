@@ -26,7 +26,7 @@ public class CustomBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         System.out.println("CustomBeanPostProcessor postProcessAfterInitialization() " + beanName);
-        if(bean instanceof BeanFather){
+        if (bean instanceof BeanFather) {
             if (((BeanFather) bean).getName() != null) {
                 System.out.println("CustomBeanPostProcessor " + beanName + " name is not null");
             }
