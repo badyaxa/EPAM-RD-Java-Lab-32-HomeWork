@@ -1,7 +1,6 @@
 package com.epam.spring.homework3.service.model;
 
 import com.epam.spring.homework3.service.model.enums.MedicalAppointmentType;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
@@ -13,15 +12,19 @@ import java.time.Instant;
 @Data
 @SuperBuilder
 @NoArgsConstructor
+@Table(name = "medical_appointments")
 public class MedicalAppointment {
-    
+
     @Id
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Instant writtenOn;
-    private String diagnosis;
+    private Instant writtedAt = Instant.now();
 
     @Enumerated(EnumType.ORDINAL)
-    private MedicalAppointmentType type;
+    private MedicalAppointmentType appointmentType;
+
+    @ManyToOne
+    @JoinColumn(name = "patient_id", nullable = false)
+    private Patient patient;
 }
