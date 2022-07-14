@@ -7,9 +7,8 @@ import com.epam.spring.homework3.service.model.Doctor;
 import com.epam.spring.homework3.service.model.Nurse;
 import com.epam.spring.homework3.service.model.Patient;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,17 +38,12 @@ import java.util.List;
 @RequestMapping("/reception")
 @Tag(name = "Reception Controller", description = "Адміністратору системи доступний список"
         + " Лікарів за категоріями (педіатр, травматолог, хірург, ...) і список Пацієнтів.")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ReceptionController {
 
-    @Autowired
-    private DoctorService doctorService;
-
-    @Autowired
-    private NurseService nurseService;
-
-    @Autowired
-    private PatientService patientService;
+    private final DoctorService doctorService;
+    private final NurseService nurseService;
+    private final PatientService patientService;
 
     // TODO: сортування лікарів:
 //    за алфавітом;
