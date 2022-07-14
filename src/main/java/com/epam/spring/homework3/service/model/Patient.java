@@ -1,5 +1,6 @@
 package com.epam.spring.homework3.service.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -25,5 +26,6 @@ public class Patient extends Person {
     private LocalDate dateOfBirth;
 
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<MedicalAppointment> hospitalCard = new java.util.LinkedHashSet<>();
+    @JsonIgnore
+    private Set<MedicalAppointment> hospitalCard;
 }
