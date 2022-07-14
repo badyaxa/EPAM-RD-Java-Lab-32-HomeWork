@@ -24,7 +24,6 @@ public class MedicalAppointment {
     @Enumerated(EnumType.ORDINAL)
     private MedicalAppointmentType appointmentType;
 
-    @ManyToOne
-    @JoinColumn(name = "patient_id", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Patient patient;
 }

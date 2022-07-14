@@ -5,11 +5,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -24,6 +24,6 @@ public class Patient extends Person {
     private String bloodType;
     private LocalDate dateOfBirth;
 
-    @OneToMany(mappedBy = "patient")
-    private Set<MedicalAppointment> hospitalCard;
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<MedicalAppointment> hospitalCard = new java.util.LinkedHashSet<>();
 }
