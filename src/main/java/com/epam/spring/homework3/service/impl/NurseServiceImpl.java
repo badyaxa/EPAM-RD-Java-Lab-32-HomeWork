@@ -8,20 +8,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
 public class NurseServiceImpl implements NurseService {
 
-    //final
     private final NurseRepository nurseRepository;
 
     public List<Nurse> listNurses() {
-        log.info("NurseServiceImpl.listNurses");
-        return nurseRepository.findAll()
-                .stream()
-                .collect(Collectors.toList());
+        log.info("---NurseServiceImpl.listNurses()");
+        return nurseRepository.findAll();
     }
 }

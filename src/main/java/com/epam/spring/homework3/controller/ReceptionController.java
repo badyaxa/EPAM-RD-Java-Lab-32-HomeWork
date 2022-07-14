@@ -1,11 +1,11 @@
 package com.epam.spring.homework3.controller;
 
+import com.epam.spring.homework3.service.DoctorService;
+import com.epam.spring.homework3.service.NurseService;
+import com.epam.spring.homework3.service.PatientService;
 import com.epam.spring.homework3.service.model.Doctor;
 import com.epam.spring.homework3.service.model.Nurse;
 import com.epam.spring.homework3.service.model.Patient;
-import com.epam.spring.homework3.service.repository.DoctorRepository;
-import com.epam.spring.homework3.service.repository.NurseRepository;
-import com.epam.spring.homework3.service.repository.PatientRepository;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -43,13 +43,13 @@ import java.util.List;
 public class ReceptionController {
 
     @Autowired
-    private DoctorRepository doctorRepository;
+    private DoctorService doctorService;
 
     @Autowired
-    private NurseRepository nurseRepository;
+    private NurseService nurseService;
 
     @Autowired
-    private PatientRepository patientRepository;
+    private PatientService patientService;
 
     // TODO: сортування лікарів:
 //    за алфавітом;
@@ -58,13 +58,13 @@ public class ReceptionController {
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/doctors")
     public List<Doctor> getAllDoctors() {
-        return doctorRepository.findAll();
+        return doctorService.listDoctors();
     }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/nurses")
     public List<Nurse> getAllNurses() {
-        return nurseRepository.findAll();
+        return nurseService.listNurses();
     }
 
     // TODO: сортування пацієнтів:
@@ -73,7 +73,7 @@ public class ReceptionController {
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/patients")
     public List<Patient> getAllPatients() {
-        return patientRepository.findAll();
+        return patientService.listPatients();
     }
 
     // TODO: Адміністратор реєструє в системі лікарів
